@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bubble Chart</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script type="text/javascript" src="../d3/d3.v3.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn  btn-outline-danger" href="../index.html">
+            <object data="your.svg" type="image/svg+xml">
+              <img src="../assets/img/back.svg" /> BACK
+            </object>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--  -->
+
+    <!-- chart -->
+    <div class="jumbotron container-fluid padding">
+      <div class="row">
+        <div class="col-md-12 col-lg-6">
+          <h2>Bubble Chart</h2>
+          <p>
+            Number of people with heart disease based on age group and anginal
+            pain
+          </p>
+          <p>Atribut:</p>
+          <ul>
+            <li>
+              Age group
+              <ul>
+                <li>
+                  20s
+                  <div
+                    class="color-box-no"
+                    style="background-color: rgb(31, 119, 180);"
+                  ></div>
+                </li>
+                <li>
+                  30s
+                  <div
+                    class="color-box-no"
+                    style="background-color: rgb(255, 127, 14);"
+                  ></div>
+                </li>
+                <li>
+                  40s
+                  <div
+                    class="color-box-no"
+                    style="background-color: rgb(44, 160, 44);"
+                  ></div>
+                </li>
+                <li>
+                  50s
+                  <div
+                    class="color-box-no"
+                    style="background-color: rgb(214, 39, 40);"
+                  ></div>
+                </li>
+                <li>
+                  60s
+                  <div
+                    class="color-box-no"
+                    style="background-color: rgb(148, 103, 189);"
+                  ></div>
+                </li>
+                <li>
+                  70s
+                  <div
+                    class="color-box-no"
+                    style="background-color: rgb(140, 86, 75);"
+                  ></div>
+                </li>
+              </ul>
+            </li>
+            <li>Number of Patient (Size)</li>
+            <li>
+              Anginal-pain (Buble)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+
+    <div class="chart-example" id="chart"><svg></svg></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.min.js"></script>
+    <script src="../js/bubble_chart.js"></script>
+    <script>
+      d3.csv("../data/heart_age_summary.csv", function(error, data) {
+        if (error) {
+          console.error("Error getting or parsing the data.");
+          throw error;
+        }
+        var chart = bubbleChart()
+          .width(1000)
+          .height(600);
+        chart
+          .columnForColors("gen")
+          .columnForRadius("counts")
+          .minRadius(10)
+          .maxRadius(70)
+          .forceApart(-300);
+        chart
+          .title("")
+          .showTitleOnCircle(true)
+          .unitName("persons");
+        chart.columnForTitle("cp");
+
+        // selection.datum() returns the bound datum for the first element in the selection and doesn't join the specified array of data with the selected elements
+        d3.select("#chart")
+          .datum(data)
+          .call(chart);
+      });
+    </script>
+  </body>
+</html>

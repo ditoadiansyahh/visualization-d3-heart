@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script type="text/javascript" src="../d3/d3.v3.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img src="../assets/img/d3.png" width="30" height="30" alt="logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./pages/about.html"
+              >About <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--  -->
+    <!-- Dataset -->
+    <div class="container-fluid">
+      <h2 class="display-4">Heart Disease Dataset</h2>
+    </div>
+    <div class="container-fluid jumbotron">
+      <p class="lead">
+        About Dataset
+      </p>
+      <p>Size : [303, 14]</p>
+      <p>
+        Heart disease database contains 76 attributes, but all published
+        experiments refer to using a subset of 14 of them. In particular, the
+        Cleveland database is the only one that has been used by ML researchers
+        to this date. The "goal" field refers to the presence of heart disease
+        in the patient. It is integer valued from 0 (no presence) to 4.
+        <a href="https://archive.ics.uci.edu/ml/datasets/heart+Disease"
+          >Learn more..</a
+        >
+      </p>
+    </div>
+    <div class="container-fluid">
+      <p class="lead">Attribute Description</p>
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Attributes</th>
+            <th scope="col">Attr. Types</th>
+            <th scope="col">Attr. inf</th>
+            <th scope="col">Domain</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">age</th>
+            <td>int64, Ratio</td>
+            <td>age in year</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row">Sex</th>
+            <td>int64, nominal</td>
+            <td>Sex / gender</td>
+            <td>1 = Male; 0 = Female</td>
+          </tr>
+          <tr>
+            <th scope="row">Cp</th>
+            <td>int64, nominal</td>
+            <td>Chest pain type</td>
+            <td>
+              Value 1: typical angina; Value 2: atypical angina; Value 3:
+              non-anginal pain; Value 4: asymptomatic
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Trestbps</th>
+            <td>int64, ratio</td>
+            <td>Resting blood pressure</td>
+            <td>
+              in mm Hg on admission to the hospital
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Chol</th>
+            <td>int64, ratio</td>
+            <td>serum cholestoral</td>
+            <td>
+              in mg/dl
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Fbs</th>
+            <td>int64, nominal</td>
+            <td>fasting blood sugar > 120 mg/dl</td>
+            <td>
+              1 = true; 0 = false
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Restecg</th>
+            <td>int64, order</td>
+            <td>resting electrocardiographic results</td>
+            <td>
+              Value 0: normal; Value 1: having ST-T wave abnormality (T wave
+              inversions and/or ST elevation or depression of > 0.05 mV); Value
+              2: showing probable or definite left ventricular hypertrophy by
+              Estes' criteria
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Thalach</th>
+            <td>int64, ratio</td>
+            <td>maximum heart rate achieved</td>
+            <td>
+              -
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Exang</th>
+            <td>int64, nominal</td>
+            <td>exercise induced angina</td>
+            <td>
+              1 = yes; 0 = no
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Oldpeak</th>
+            <td>float64, ratio</td>
+            <td>ST depression induced by exercise relative to rest</td>
+            <td>
+              -
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Slope</th>
+            <td>int64, order</td>
+            <td>the slope of the peak exercise ST segment</td>
+            <td>
+              Value 1: upsloping; Value 2: flat; Value 3: downsloping
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Ca</th>
+            <td>int64, order</td>
+            <td>number of major vessels colored by flourosopy</td>
+            <td>
+              0-3
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Thal</th>
+            <td>int64, order</td>
+            <td>-</td>
+            <td>
+              3 = normal; 6 = fixed defect; 7 = reversable defect
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Target</th>
+            <td>int64, nominal</td>
+            <td>Status of patient from getting disease</td>
+            <td>
+              1 = yes; 0 = no
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+    </div>
+    <!--  -->
+    <!-- CSV -->
+    <div class="container my-3">
+      <h3>
+        Data
+      </h3>
+      <div id="key" style="height:500;overflow:auto;"></div>
+    </div>
+    <div class="container-fluid jumbotron">
+      <h3>
+        Team
+      </h3>
+      <p>Rachmaddinta Herpradipto A</p>
+      <p>Bennedict Timotius C</p>
+      <p>Muhammad Azzam</p>
+    </div>
+
+    <!--  -->
+    <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+
+    <script type="text/javascript" charset="utf-8">
+      d3.text("../data/heart.csv", function(data) {
+        var parsedCSV = d3.csv.parseRows(data);
+
+        var key = d3;
+        var container = d3
+          .select("#key")
+          .append("div")
+          .attr("class", "container ")
+          .style("height", "500px")
+          .style("overflow", "auto")
+          .append("table")
+          .attr("class", "table table-striped table-dark")
+
+          .selectAll("tr")
+          .data(parsedCSV)
+          .enter()
+          .append("tr")
+
+          .selectAll("td")
+          .data(function(d) {
+            return d;
+          })
+          .enter()
+          .append("td")
+          .text(function(d) {
+            return d;
+          });
+      });
+    </script>
+  </body>
+</html>

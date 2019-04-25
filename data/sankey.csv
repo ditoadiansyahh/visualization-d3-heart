@@ -1,0 +1,28 @@
+source,target,value
+20s,male,1
+30s,female,5
+30s,male,13
+40s,female,22
+40s,male,54
+50s,female,35
+50s,male,94
+60s,female,29
+60s,male,44
+70s,female,5
+70s,male,1
+asymptomatic,no,7
+asymptomatic,yes,16
+atypical angina,no,9
+atypical angina,yes,41
+female,asymptomatic,4
+female,atypical angina,18
+female,non-anginal pain,35
+female,typical angina,39
+male,asymptomatic,19
+male,atypical angina,32
+male,non-anginal pain,52
+male,typical angina,104
+non-anginal pain,no,18
+non-anginal pain,yes,69
+typical angina,no,104
+typical angina,yes,39

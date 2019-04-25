@@ -1,0 +1,21 @@
+gen,cp,counts
+20s,atypical angina,1
+30s,asymptomatic,2
+30s,atypical angina,2
+30s,non-anginal pain,7
+30s,typical angina,1
+40s,asymptomatic,1
+40s,atypical angina,19
+40s,non-anginal pain,20
+40s,typical angina,13
+50s,asymptomatic,7
+50s,atypical angina,14
+50s,non-anginal pain,28
+50s,typical angina,15
+60s,asymptomatic,6
+60s,atypical angina,3
+60s,non-anginal pain,12
+60s,typical angina,9
+70s,atypical angina,2
+70s,non-anginal pain,2
+70s,typical angina,1
